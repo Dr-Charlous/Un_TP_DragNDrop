@@ -28,6 +28,7 @@ public class DragTile : MonoBehaviour
     private void OnMouseDrag()
     {
         transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        //transform.position = new Vector3(transform.position.x, transform.position.y);
         transform.position = tileMap.GetCellCenterWorld(tileMap.LocalToCell(new Vector3(transform.position.x, transform.position.y)));
     }
 }
